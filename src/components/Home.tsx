@@ -21,15 +21,15 @@ function Home() {
               <div className="stat-grid mt-4">
                 <div className="stat-card">
                   <h3>8+</h3>
-                  <p>Años de experiencia</p>
+                  <p>Years of experience</p>
                 </div>
                 <div className="stat-card">
                   <h3>25+</h3>
-                  <p>Proyectos entregados</p>
+                  <p>Projects delivered</p>
                 </div>
                 <div className="stat-card">
                   <h3>15</h3>
-                  <p>Clientes satisfechos</p>
+                  <p>Satisfied clients</p>
                 </div>
               </div>
             </div>
