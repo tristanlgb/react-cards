@@ -61,14 +61,20 @@ select {
 
 .navbar {
   padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
-  background: rgba(5, 7, 13, 0.72);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.28);
+  background:
+    linear-gradient(110deg, rgba(124, 108, 255, 0.88), rgba(10, 12, 24, 0.92) 48%, rgba(0, 212, 255, 0.68)) !important;
+  background-size: 180% 180% !important;
+  background-position: 0% 50% !important;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.28), 0 1px 20px rgba(0, 212, 255, 0.12);
   backdrop-filter: blur(14px);
+  animation: navbarGradient 10s ease-in-out infinite alternate;
 }
 
 .navbar-brand {
   font-weight: 700;
   letter-spacing: 0.08em;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
 .navbar-nav {
@@ -78,12 +84,14 @@ select {
 
 .nav-link {
   color: rgba(255, 255, 255, 0.9) !important;
-  transition: color 0.25s ease, transform 0.25s ease;
+  transition: color 0.25s ease, transform 0.25s ease, text-shadow 0.25s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus-visible {
   color: #ffffff !important;
   transform: translateY(-1px);
+  text-shadow: 0 0 16px rgba(0, 212, 255, 0.72);
 }
 
 .section {
@@ -326,12 +334,25 @@ select {
   }
 }
 
+@keyframes navbarGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 footer {
   border-top: 1px solid var(--border);
   background: rgba(8, 10, 16, 0.95);
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .navbar {
+    animation: none;
+  }
+
   #about .card,
   #stack .card,
   #hire .card,
