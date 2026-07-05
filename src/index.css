@@ -144,6 +144,45 @@ select {
   background: transparent;
 }
 
+#about .card,
+#stack .card,
+#hire .card,
+#contact .row > .col-lg-6:first-child .card {
+  background:
+    linear-gradient(135deg, rgba(124, 108, 255, 0.12), rgba(0, 212, 255, 0.08)),
+    rgba(255, 255, 255, 0.97);
+  background-size: 180% 180%;
+  background-position: 0% 50%;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-position 0.4s ease;
+}
+
+#about .card:hover,
+#stack .card:hover,
+#hire .card:hover,
+#contact .row > .col-lg-6:first-child .card:hover,
+#contact .row > .col-lg-6:first-child .card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(0, 212, 255, 0.58);
+  background-position: 100% 50%;
+  box-shadow:
+    0 22px 45px rgba(0, 212, 255, 0.16),
+    0 14px 30px rgba(124, 108, 255, 0.18);
+}
+
+#contact .row > .col-lg-6:first-child .card a {
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+#contact .row > .col-lg-6:first-child .card a:hover,
+#contact .row > .col-lg-6:first-child .card a:focus-visible {
+  color: #5548d9;
+  text-shadow: 0 0 18px rgba(0, 212, 255, 0.24);
+}
+
 .project-card {
   background: rgba(255, 255, 255, 0.96) !important;
 }
@@ -290,6 +329,16 @@ select {
 footer {
   border-top: 1px solid var(--border);
   background: rgba(8, 10, 16, 0.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #about .card,
+  #stack .card,
+  #hire .card,
+  #contact .row > .col-lg-6:first-child .card,
+  #contact .row > .col-lg-6:first-child .card a {
+    transition: none;
+  }
 }
 
 @media (max-width: 991px) {
