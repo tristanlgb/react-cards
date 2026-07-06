@@ -37,7 +37,15 @@ function Contact() {
               <p className="text-muted">
                 You can download my CV below and review my experience, projects, and technical stack in detail.
               </p>
-              <a className="btn btn-primary" href="#" role="button">Download CV</a>
+              <a
+                className="btn btn-primary"
+                href="https://drive.google.com/file/d/1SGQyw23De9kk18zZmCULGiOmXOAI07mR/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                role="button"
+              >
+                Download CV
+              </a>
             </div>
           </div>
         </div>
