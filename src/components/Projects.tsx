@@ -24,7 +24,7 @@ function Projects() {
                   <span className="badge bg-info text-dark">React</span>
                 </div>
                 <a className="btn btn-outline-primary me-2" href="https://tpfinal-react-lenzberg.vercel.app/" target="_blank" rel="noreferrer">Live Demo</a>
-                <a className="btn btn-primary" href="https://github.com/tristanlgb/ProyectoFinalBackend3_Lenzberg" target="_blank" rel="noreferrer">Code</a>
+                <a className="btn btn-primary" href="https://github.com/tristanlgb/TPFinal_React_Lenzberg" target="_blank" rel="noreferrer">Code</a>
               </div>
             </div>
           </div>
