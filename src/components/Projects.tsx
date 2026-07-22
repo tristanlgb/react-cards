@@ -1,141 +1,16 @@
+const projects = [
+  { number:'01', title:'Social Observatory', type:'Data visualization · Social research', description:'A responsible, accessible dashboard that compares socioeconomic samples from 2016 and 2024 while making methodological limits and privacy considerations explicit.', tags:['Data storytelling','Chart.js','Accessible UI'], live:'', code:'https://github.com/tristanlgb/AppGraficosClaseSocial', featured:true, tone:'green' },
+  { number:'02', title:'Full-Stack Commerce', type:'End-to-end product', description:'A complete shopping experience with secure authentication, product management, persistent data, and a responsive customer-facing interface.', tags:['Product architecture','Authentication','MongoDB'], live:'https://tpfinal-react-lenzberg.vercel.app/', code:'https://github.com/tristanlgb/TPFinal_React_Lenzberg', featured:false, tone:'purple' },
+  { number:'03', title:'Academic Administration', type:'Operations platform', description:'A structured portal for managing students, courses, and enrolments, with search tools and an interface designed around everyday administrative tasks.', tags:['Angular','Information design','Responsive'], live:'https://trabajo-final-angular-indol.vercel.app/', code:'https://github.com/tristanlgb/TrabajoFinalAngular', featured:false, tone:'orange' }
+]
+
 function Projects() {
-  return (
-    <section id="projects" className="section py-5">
-      <div className="container">
-        <div className="section-header fade-in-up">
-          <span className="eyebrow">🚀 Featured Projects</span>
-
-          <h2>Real applications that showcase my skills</h2>
-
-          <p className="section-intro">
-            These are some of the applications I built using React,
-            TypeScript, Angular, NestJS, Express and MongoDB.
-          </p>
-        </div>
-
-        <div className="row g-4">
-          {/* Full Stack E-Commerce */}
-          <div className="col-md-6 fade-in-up delay-1">
-            <div className="card project-card shadow-sm h-100">
-              <div className="card-body">
-                <h3 className="h5">Full Stack E-Commerce</h3>
-
-                <p className="text-muted">
-                  Full Stack e-commerce application with a NestJS backend,
-                  MongoDB database and React frontend, including JWT and OAuth
-                  authentication.
-                </p>
-
-                <div className="badge-group mb-3">
-                  <span className="badge bg-primary">NestJS</span>
-                  <span className="badge bg-secondary">MongoDB</span>
-                  <span className="badge bg-info text-dark">React</span>
-                  <span className="badge bg-dark">TypeScript</span>
-                </div>
-
-                <a
-                  className="btn btn-outline-primary me-2"
-                  href="https://tpfinal-react-lenzberg.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Live Demo
-                </a>
-
-                <a
-                  className="btn btn-primary"
-                  href="https://github.com/tristanlgb/TPFinal_React_Lenzberg"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Code
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Angular Academic Portal */}
-          <div className="col-md-6 fade-in-up delay-2">
-            <div className="card project-card shadow-sm h-100">
-              <div className="card-body">
-                <h3 className="h5">Academic Administration Portal</h3>
-
-                <p className="text-muted">
-                  Academic administration portal developed with Angular and
-                  TypeScript for managing students, courses and enrollments,
-                  including an administrative dashboard, search tools and
-                  responsive interfaces.
-                </p>
-
-                <div className="badge-group mb-3">
-                  <span className="badge bg-danger">Angular</span>
-                  <span className="badge bg-primary">TypeScript</span>
-                  <span className="badge bg-secondary">MockAPI</span>
-                  <span className="badge bg-dark">Vercel</span>
-                </div>
-
-                <a
-                  className="btn btn-outline-primary me-2"
-                  href="https://trabajo-final-angular-indol.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Live Demo
-                </a>
-
-                <a
-                  className="btn btn-primary"
-                  href="https://github.com/tristanlgb/TrabajoFinalAngular"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Code
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Portfolio */}
-          <div className="col-md-6 fade-in-up delay-3">
-            <div className="card project-card shadow-sm h-100">
-              <div className="card-body">
-                <h3 className="h5">Portfolio Website</h3>
-
-                <p className="text-muted">
-                  React and Vite portfolio with a professional presentation of
-                  projects, technical skills and contact information.
-                </p>
-
-                <div className="badge-group mb-3">
-                  <span className="badge bg-primary">React</span>
-                  <span className="badge bg-secondary">Vite</span>
-                  <span className="badge bg-info text-dark">Design</span>
-                </div>
-
-                <a
-                  className="btn btn-outline-primary me-2"
-                  href="https://react-cards-one-nu.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Live Demo
-                </a>
-
-                <a
-                  className="btn btn-primary"
-                  href="https://github.com/tristanlgb/reactCards-main"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+  return <section id="projects" className="projects-section"><div className="shell">
+    <div className="projects-heading"><div className="section-label light"><span>02</span><p>Selected work</p></div><h2>Projects where technology serves a clear purpose.</h2><p>A focused selection across social data, commerce, and institutional tools.</p></div>
+    <div className="project-list">{projects.map(project => <article className={`project-row ${project.tone}`} key={project.title}>
+      <div className="project-number">{project.number}</div><div className="project-main"><span>{project.type}</span><h3>{project.title}</h3><p>{project.description}</p><div className="project-tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div>
+      <div className="project-links">{project.live && <a href={project.live} target="_blank" rel="noreferrer">Live project ↗</a>}<a href={project.code} target="_blank" rel="noreferrer">View source ↗</a></div>
+    </article>)}</div>
+  </div></section>
 }
-
-export default Projects;
+export default Projects

@@ -1,57 +1,9 @@
 function Contact() {
-  return (
-    <section id="contact" className="section py-5 bg-light">
-      <div className="container">
-        <div className="section-header fade-in-up">
-          <span className="eyebrow">📬 Contact</span>
-          <h2>Contact Me</h2>
-          <p className="section-intro">
-            I'd love to hear from you. If you're looking for a developer with strong frontend and backend skills, let's connect.
-          </p>
-        </div>
-
-        <div className="row align-items-center gy-4">
-          <div className="col-lg-6 fade-in-up delay-1">
-            <div className="card shadow-sm p-4 h-100">
-              <h3>Contact details</h3>
-              <p className="text-muted mb-1">Email</p>
-              <p className="mb-3">tristanlgb@hotmail.com</p>
-              <p className="text-muted mb-1">WhatsApp</p>
-              <p className="mb-3">
-                <a href="https://wa.me/541150490152" target="_blank" rel="noreferrer">+54 11 5049 0152</a>
-              </p>
-              <p className="text-muted mb-1">GitHub</p>
-              <p className="mb-3">
-                <a href="https://github.com/tristanlgb" target="_blank" rel="noreferrer">github.com/tristanlgb</a>
-              </p>
-              <p className="text-muted mb-1">LinkedIn</p>
-              <p>
-                <a href="https://www.linkedin.com/in/tristanlenzberg" target="_blank" rel="noreferrer">linkedin.com/in/tristanlenzberg</a>
-              </p>
-            </div>
-          </div>
-
-          <div className="col-lg-6 fade-in-up delay-2">
-            <div className="card shadow-sm p-4 h-100">
-              <h3>Download CV</h3>
-              <p className="text-muted">
-                You can download my CV below and review my experience, projects, and technical stack in detail.
-              </p>
-              <a
-                className="btn btn-primary"
-                href="https://drive.google.com/file/d/1SGQyw23De9kk18zZmCULGiOmXOAI07mR/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-                role="button"
-              >
-                Download CV
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+  return <section id="contact" className="contact-section"><div className="shell contact-grid">
+    <div className="section-label"><span>03</span><p>Contact</p></div>
+    <div className="contact-copy"><span className="kicker"><i/> Open to new opportunities</span><h2>Have a meaningful idea?<br/><em>Let’s make it real.</em></h2><p>I am available for full-time roles, freelance projects, and collaborations at the intersection of technology, communication, and social impact.</p>
+      <div className="contact-actions"><a className="button primary" href="mailto:tristanlgb@hotmail.com">tristanlgb@hotmail.com <span>→</span></a><a href="https://www.linkedin.com/in/tristanlenzberg" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/tristanlgb" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+    </div>
+  </div></section>
 }
-
-export default Contact;
+export default Contact

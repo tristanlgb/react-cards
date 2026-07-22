@@ -1,9 +1,7 @@
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
-import Skills from './components/Skills'
 import Projects from './components/Projects'
-import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -11,12 +9,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <main className="app-shell">
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <main id="main-content" className="app-shell">
         <Home />
         <About />
-        <Skills />
         <Projects />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />

@@ -1,51 +1,14 @@
 import profilePhoto from '../assets/hero.png'
 
 function Home() {
-  return (
-    <section id="home" className="hero section py-5">
-      <div className="container">
-        <div className="hero-card p-5 shadow-sm fade-in-up">
-          <div className="row align-items-center gy-4">
-            <div className="col-lg-7">
-              <span className="eyebrow">👋 Hello, I'm Tristan</span>
-              <h1 className="hero-title">Full-Stack Developer</h1>
-              <p className="hero-text">
-                I build modern web applications with React, TypeScript, Express/NestJS, and MongoDB. I focus on clean architecture, reusable components, and scalable frontend/backend solutions.
-              </p>
-
-              <div className="hero-actions">
-                <a className="btn btn-primary btn-lg" href="#projects">Featured Projects</a>
-                <a className="btn btn-outline-primary btn-lg" href="#contact">Contact Me</a>
-              </div>
-
-              <div className="stat-grid mt-4">
-                <div className="stat-card">
-                  <h3>8+</h3>
-                  <p>Years of experience</p>
-                </div>
-                <div className="stat-card">
-                  <h3>25+</h3>
-                  <p>Projects delivered</p>
-                </div>
-                <div className="stat-card">
-                  <h3>15</h3>
-                  <p>Satisfied clients</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-5 text-center">
-              <img
-                src={profilePhoto}
-                alt="Profile"
-                className="img-fluid rounded-4 shadow-sm"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+  return <section id="home" className="hero-section"><div className="shell hero-grid">
+    <div className="hero-copy"><span className="kicker"><i/> Buenos Aires, Argentina</span>
+      <h1>I build digital products with a <em>human point of view.</em></h1>
+      <p>Full-stack developer, UBA social communicator, and Sociology student. I connect technology, research, and clear communication to turn complex ideas into thoughtful digital experiences.</p>
+      <div className="hero-actions"><a className="button primary" href="#projects">Explore selected work <span>→</span></a><a className="button ghost" href="#contact">Let’s work together</a></div>
+      <div className="hero-meta"><span><strong>Development</strong>Web products & interfaces</span><span><strong>Social insight</strong>Research & communication</span></div>
+    </div>
+    <div className="portrait-wrap"><div className="portrait-glow"/><img src={profilePhoto} alt="Tristan Lenzberg"/><span className="portrait-note">Developer × Social researcher</span></div>
+  </div></section>
 }
-
-export default Home;
+export default Home
