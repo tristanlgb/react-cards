@@ -1,49 +1,42 @@
-# Portfolio en React
+# Tristan Lenzberg — Full-Stack Developer
 
-Sitio personal de presentación profesional construido con React y TypeScript. Reúne información personal, habilidades, proyectos, testimonios y datos de contacto en una landing page responsiva.
+Portfolio personal en React y TypeScript, publicado en https://react-cards-one-nu.vercel.app/.
 
-## Secciones
+## Contenido
 
-- Inicio con presentación principal.
-- Sobre mí.
-- Habilidades técnicas.
-- Proyectos destacados mediante tarjetas.
-- Testimonios.
-- Contacto.
-- Navegación y pie de página reutilizables.
+- Presentación profesional, stack y acceso al CV.
+- Siete proyectos con filtros por Full stack, Frontend y Data.
+- Caso técnico de La Nación Cards: experiencia, arquitectura, decisiones y límites del prototipo.
+- Biografía, formación y contacto.
 
-## Stack
+## Desarrollo
 
-- React 19
-- TypeScript
-- Vite
-- Bootstrap
-- CSS
-- ESLint
-
-## Organización
-
-La aplicación utiliza una estructura basada en componentes dentro de `src/components/`. Cada sección de la landing es independiente y `src/App.tsx` las compone en una única experiencia de navegación.
-
-## Ejecución local
-
-```bash
-npm install
+```sh
+npm ci
 npm run dev
+npm run build
+npm run lint
+npm run preview
 ```
 
-Abrir la URL indicada por Vite, normalmente `http://localhost:5173`.
+## Estructura y edición
 
-## Comandos
+- `src/components/Home.tsx`: presentación y esquema de arquitectura.
+- `src/components/Projects.tsx`: catálogo, filtros y caso destacado. Mantener descripciones basadas en funcionalidades verificables.
+- `src/components/About.tsx`: perfil y tecnologías.
+- `src/components/Contact.tsx` y `Navbar.tsx`: contacto y CV existente en Google Drive.
+- `src/index.css`: estilos propios y breakpoints responsive; no depende de Bootstrap.
+- `index.html`: metadatos, idioma y canonical de producción.
+- `PORTFOLIO_REVIEW.md`: diagnóstico y recomendaciones de contenido.
 
-```bash
-npm run build    # compila TypeScript y genera producción
-npm run lint     # ejecuta el análisis estático
-npm run preview  # previsualiza el build
-```
+## Verificación manual
 
-## Personalización
+- All muestra 7 proyectos; Full stack 2; Frontend 4; Data 1.
+- Abrir el caso técnico y comprobar los enlaces de demo y código.
+- Abrir el menú en pantallas estrechas, navegar por secciones y cerrar con Escape.
+- Recorrer enlaces y filtros con teclado; comprobar foco visible y enlace de salto al contenido.
+- Revisar escritorio y móvil, incluyendo anclas bajo el encabezado fijo.
 
-Los textos y proyectos pueden modificarse directamente en los componentes correspondientes. Los estilos globales y por sección se encuentran en los archivos CSS del proyecto.
+## Publicación
 
-> Proyecto de portfolio personal y práctica de composición de interfaces con React.
+Vercel debe compilar con `npm run build` y servir `dist`. Los cambios de una rama pueden revisarse mediante un Preview Deployment si la integración de GitHub está habilitada. La fusión de la propuesta a la rama de producción es un paso separado.

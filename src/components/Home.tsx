@@ -1,66 +1,89 @@
-const profilePhoto =
-  "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85";
-
 function Home() {
   return (
-    <section id="home" className="hero-section">
+    <section id="home" className="hero-section" aria-labelledby="hero-title">
       <div className="shell hero-grid">
         <div className="hero-copy">
           <span className="kicker">
-            <i />
-            Buenos Aires, Argentina
+            <i /> Full-stack developer · Buenos Aires
           </span>
-
-          <h1>
-            I build digital products with a{" "}
-            <em>human point of view.</em>
+          <h1 id="hero-title">
+            From interface
+            <br />
+            to API.
+            <br />
+            <em>Built with purpose.</em>
           </h1>
-
           <p>
-            Full-stack developer, UBA social communicator, and Sociology
-            student. I connect technology, research, and clear communication
-            to turn complex ideas into thoughtful digital experiences.
+            I’m Tristan Lenzberg. I build web applications with React,
+            TypeScript and Node.js, connecting thoughtful interfaces with the
+            services behind them.
           </p>
-
+          <p className="hero-intro">
+            A background in Social Communication at UBA brings research, clear
+            writing and a human perspective to my development work.
+          </p>
           <div className="hero-actions">
             <a className="button primary" href="#projects">
-              Explore selected work <span>→</span>
+              Explore my projects <span aria-hidden="true">↗</span>
             </a>
-
-            <a className="button ghost" href="#contact">
-              Let’s work together
+            <a
+              className="button ghost"
+              href="https://drive.google.com/file/d/1SGQyw23De9kk18zZmCULGiOmXOAI07mR/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View résumé ↗
             </a>
           </div>
-
           <div className="hero-meta">
             <span>
-              <strong>Development</strong>
-              Web products & interfaces
+              <strong>Frontend</strong>React · TypeScript · Angular
             </span>
-
             <span>
-              <strong>Social insight</strong>
-              Research & communication
+              <strong>Backend & delivery</strong>Node.js · HTTP APIs · Vercel
             </span>
           </div>
         </div>
-
-        <div className="portrait-wrap">
-          <div className="portrait-glow" />
-
-          <img
-            src={profilePhoto}
-            alt="Full stack developer working with code"
-            loading="eager"
-          />
-
-          <span className="portrait-note">
-            Developer × Social researcher
-          </span>
-        </div>
+        <aside
+          className="engineering-card"
+          aria-label="Featured project architecture"
+        >
+          <div className="engineering-header">
+            <span className="status-dot" /> PROJECT SPOTLIGHT{" "}
+            <span>01 / 07</span>
+          </div>
+          <p className="engineering-eyebrow">Independent editorial prototype</p>
+          <h2>La Nación Cards</h2>
+          <p>A news experience built across the stack.</p>
+          <ol className="architecture-flow">
+            <li>
+              <span>01</span>
+              <div>
+                <strong>React + TypeScript</strong>
+                <small>Search, filters & saved stories</small>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>Node.js · /api/news</strong>
+                <small>Validation, timeouts & response caching</small>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>GNews / public RSS</strong>
+                <small>Server-side provider integration</small>
+              </div>
+            </li>
+          </ol>
+          <a href="#projects">
+            Explore the implementation <span aria-hidden="true">↗</span>
+          </a>
+        </aside>
       </div>
     </section>
   );
 }
-
 export default Home;
