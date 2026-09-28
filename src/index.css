@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap");
 :root {
-  --ink: #141718;
-  --paper: #f5f3ed;
-  --cream: #ece9df;
-  --muted: #68706e;
-  --green: #9bc9b9;
-  --green-dark: #193f39;
-  --violet: #9381c9;
-  --orange: #dc9a6c;
-  --line: rgba(20, 23, 24, 0.14);
+  --ink: #382535;
+  --paper: #fff5f7;
+  --cream: #f8e5ee;
+  --muted: #705768;
+  --rose: #efb8d0;
+  --accent: #854364;
+  --violet: #b8a0d3;
+  --orange: #e6b5a6;
+  --line: rgba(105, 59, 86, 0.22);
   font-family: "DM Sans", sans-serif;
   color: var(--ink);
   background: var(--paper);
@@ -60,7 +60,7 @@ button {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(245, 243, 237, 0.88);
+  background: rgba(255, 245, 247, 0.92);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
 }
@@ -95,10 +95,10 @@ button {
 }
 .nav-links > a {
   font-size: 13px;
-  color: #4f5654;
+  color: #705768;
 }
 .nav-links > a:hover {
-  color: #000;
+  color: #582743;
 }
 .nav-links .nav-cta {
   padding: 10px 16px;
@@ -125,12 +125,12 @@ button {
   background:
     radial-gradient(
       circle at 80% 20%,
-      rgba(147, 129, 201, 0.22),
+      rgba(194, 164, 224, 0.3),
       transparent 24%
     ),
     radial-gradient(
       circle at 15% 75%,
-      rgba(155, 201, 185, 0.27),
+      rgba(244, 167, 197, 0.35),
       transparent 27%
     ),
     var(--paper);
@@ -154,7 +154,7 @@ button {
 .kicker i {
   width: 7px;
   height: 7px;
-  background: var(--green-dark);
+  background: var(--accent);
   border-radius: 50%;
 }
 .hero-copy h1 {
@@ -169,7 +169,7 @@ button {
 .contact-copy h2 em {
   font-family: Georgia, serif;
   font-weight: 400;
-  color: var(--green-dark);
+  color: var(--accent);
 }
 .hero-copy > p {
   max-width: 660px;
@@ -235,7 +235,7 @@ button {
 .portrait-glow {
   position: absolute;
   inset: -30px;
-  background: linear-gradient(140deg, var(--green), var(--violet));
+  background: linear-gradient(140deg, var(--rose), var(--violet));
   filter: blur(45px);
   opacity: 0.38;
   border-radius: 50%;
@@ -313,8 +313,8 @@ button {
 }
 .projects-section {
   padding: 110px 0;
-  background: #151819;
-  color: #fff;
+  background: #f7e5ef;
+  color: var(--ink);
 }
 .projects-heading {
   display: grid;
@@ -324,43 +324,43 @@ button {
   margin-bottom: 65px;
 }
 .section-label.light {
-  color: #fff;
+  color: var(--ink);
 }
 .section-label.light span {
-  color: #87908e;
+  color: #705768;
 }
 .projects-heading h2 {
-  color: #fff;
+  color: var(--ink);
 }
 .projects-heading > p {
-  color: #919997;
+  color: #705768;
   font-size: 13px;
   line-height: 1.6;
 }
 .project-list {
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 1px solid var(--line);
 }
 .project-row {
   display: grid;
   grid-template-columns: 80px 1fr 180px;
   gap: 35px;
   padding: 42px 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid var(--line);
   position: relative;
   transition: background 0.25s;
 }
 .project-row:hover {
-  background: rgba(255, 255, 255, 0.035);
+  background: rgba(255, 255, 255, 0.55);
 }
 .project-number {
   font: italic 19px Georgia;
-  color: #7f8987;
+  color: #854364;
 }
 .project-main > span {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-size: 9px;
-  color: var(--green);
+  color: var(--accent);
 }
 .project-row.purple .project-main > span {
   color: #b9a9ea;
@@ -374,7 +374,7 @@ button {
   margin: 8px 0 13px;
 }
 .project-main > p {
-  color: #a3aaa8;
+  color: #705768;
   font-size: 13px;
   line-height: 1.7;
   max-width: 670px;
@@ -388,9 +388,9 @@ button {
 .project-tags span {
   font-size: 10px;
   padding: 6px 9px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--line);
   border-radius: 20px;
-  color: #c8cdcc;
+  color: #644a60;
 }
 .project-links {
   display: flex;
@@ -406,7 +406,7 @@ button {
 }
 .contact-section {
   padding: 110px 0;
-  background: linear-gradient(135deg, #e9eee8, #eee8f4 55%, #f2e5dc);
+  background: linear-gradient(135deg, #f5dce8, #eee3f6 55%, #ffebe5);
 }
 .contact-copy h2 {
   font: 500 clamp(45px, 6vw, 72px) / 1.05 "Manrope";
@@ -566,7 +566,7 @@ main {
   scroll-margin-top: 100px;
 }
 :focus-visible {
-  outline: 3px solid #99752b;
+  outline: 3px solid #975078;
   outline-offset: 5px;
 }
 a,
@@ -602,12 +602,12 @@ button {
   margin-top: 35px;
 }
 .engineering-card {
-  background: #193f39;
-  color: #edf5ef;
-  border: 1px solid #31564e;
+  background: #f9dce9;
+  color: #382535;
+  border: 1px solid #d7a7bd;
   border-radius: 16px;
   padding: 30px;
-  box-shadow: 12px 16px 0 #dce4d9;
+  box-shadow: 12px 16px 0 #e5c9dd;
   transform: rotate(1deg);
 }
 .engineering-header {
@@ -616,9 +616,9 @@ button {
   gap: 8px;
   font-size: 9px;
   letter-spacing: 1.2px;
-  color: #c5d9cb;
+  color: #705768;
   padding-bottom: 22px;
-  border-bottom: 1px solid #56776b;
+  border-bottom: 1px solid #d7a7bd;
 }
 .engineering-header > span:last-child {
   margin-left: auto;
@@ -626,12 +626,12 @@ button {
 .status-dot {
   width: 7px;
   height: 7px;
-  background: #c8ed93;
+  background: #854364;
   border-radius: 50%;
 }
 .engineering-eyebrow {
   font-size: 11px;
-  color: #c5d9cb;
+  color: #705768;
   margin: 28px 0 8px;
 }
 .engineering-card h2 {
@@ -644,7 +644,7 @@ button {
 .engineering-card > p:not(.engineering-eyebrow) {
   font-size: 13px;
   line-height: 1.6;
-  color: #c5d9cb;
+  color: #705768;
 }
 .architecture-flow {
   list-style: none;
@@ -656,11 +656,11 @@ button {
   align-items: center;
   gap: 14px;
   padding: 18px 0;
-  border-top: 1px solid #56776b;
+  border-top: 1px solid #d7a7bd;
 }
 .architecture-flow li > span {
   font: 12px monospace;
-  color: #c8ed93;
+  color: #854364;
 }
 .architecture-flow strong,
 .architecture-flow small {
@@ -672,7 +672,7 @@ button {
 }
 .architecture-flow small {
   font-size: 11px;
-  color: #c5d9cb;
+  color: #705768;
   margin-top: 6px;
   line-height: 1.6;
 }
@@ -681,7 +681,7 @@ button {
   justify-content: space-between;
   font-size: 12px;
   padding: 12px 0;
-  color: #d1edaf;
+  color: #783756;
 }
 .projects-heading {
   grid-template-columns: 150px 1fr 240px;
@@ -696,26 +696,26 @@ button {
 }
 .project-filters button {
   cursor: pointer;
-  border: 1px solid #63716b;
-  color: #d9e1dd;
+  border: 1px solid #ad8199;
+  color: #644a60;
   background: transparent;
   border-radius: 30px;
   padding: 10px 18px;
   min-height: 44px;
 }
 .project-filters button[aria-pressed="true"] {
-  color: #132c26;
-  background: #cce3bb;
-  border-color: #cce3bb;
+  color: #fff5f7;
+  background: #854364;
+  border-color: #854364;
 }
 .project-filters p {
   margin: 0 0 0 auto;
-  color: #b1bab5;
+  color: #705768;
   font-size: 12px;
 }
 .featured-project {
-  background: #202d29;
-  border: 1px solid #536559;
+  background: #fff8fb;
+  border: 1px solid #d7a7bd;
   border-radius: 12px;
   padding: 38px;
   margin-bottom: 40px;
@@ -724,7 +724,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #cce3bb;
+  color: #854364;
 }
 .project-index {
   font:
@@ -739,7 +739,7 @@ button {
   letter-spacing: -1.5px;
 }
 .featured-intro {
-  color: #d3ddd6;
+  color: #644a60;
   font-size: 17px;
   line-height: 1.7;
   max-width: 730px;
@@ -752,18 +752,18 @@ button {
 }
 .case-grid h4 {
   font-size: 13px;
-  color: #d6e9c8;
+  color: #783756;
   margin: 0 0 12px;
 }
 .case-grid p,
 .case-details p {
   font-size: 13px;
   line-height: 1.8;
-  color: #bac9c0;
+  color: #705768;
   margin: 0;
 }
 .case-details {
-  border-top: 1px solid #536559;
+  border-top: 1px solid #d7a7bd;
   padding-top: 20px;
   margin-top: 26px;
 }
@@ -785,8 +785,8 @@ button {
   font-size: 13px;
 }
 .featured-links .button {
-  background: #cce3bb;
-  color: #132c26;
+  background: #854364;
+  color: #fff5f7;
 }
 .featured-links > a:not(.button) {
   text-decoration: underline;
@@ -808,7 +808,7 @@ button {
 .stack-grid p {
   font-size: 12px;
   line-height: 1.9;
-  color: #58645e;
+  color: #705768;
 }
 @media (max-width: 1000px) {
   .hero-grid {
@@ -846,7 +846,7 @@ button {
     padding: 55px 0;
   }
   .engineering-card {
-    box-shadow: 6px 8px 0 #dce4d9;
+    box-shadow: 6px 8px 0 #e5c9dd;
   }
   .featured-project {
     padding: 24px 20px;
@@ -870,3 +870,72 @@ button {
     gap: 20px;
   }
 }
+
+/* Soft digital surfaces, paper-like texture and a quiet spectrum of color. */
+::selection { background: #ecc3db; color: #382535; }
+.site-header::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, #e9a0b9, #edbbac, #edd6a4, #bed6c9, #b9cce8, #c4aedf, #e4b3d2);
+}
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 84% 20%, #e9daf3 0, transparent 45%),
+    radial-gradient(ellipse at 12% 85%, #f6ccdf 0, transparent 52%),
+    var(--paper);
+}
+.hero-section::before, .contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .32;
+  background-image: radial-gradient(#9e698a 0.5px, transparent 0.5px);
+  background-size: 6px 6px;
+}
+.hero-copy h1 em { text-decoration: underline; text-decoration-color: #ddb1ca; text-decoration-thickness: 2px; text-underline-offset: 10px; }
+.button { border-radius: 18px 18px 18px 5px; transition: background .2s, box-shadow .2s; }
+.button.primary { background: var(--accent); box-shadow: 3px 4px 0 #eac7d9; }
+.button.primary:hover, .featured-links .button:hover { background: #68324e; }
+.button.ghost { background: #fff8fb; border-color: #c79bb2; }
+.button.ghost:hover { background: #f3dcea; }
+.brand > span { background: var(--accent); border-radius: 45% 55% 48% 52%; }
+.engineering-card {
+  position: relative;
+  border-radius: 32px 32px 32px 8px;
+  background: linear-gradient(145deg, #fbe3ed, #f3deed 65%, #e9dff3);
+  box-shadow: 9px 12px 0 #e5c9dd, 0 20px 55px #85436412;
+}
+.engineering-card::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 36%;
+  width: 100px;
+  height: 25px;
+  transform: rotate(-5deg);
+  background: #fff8eccc;
+  border-inline: 1px dashed #c79bb2;
+  box-shadow: 0 1px 2px #85436412;
+  pointer-events: none;
+}
+.engineering-header { border-bottom-style: dashed; }
+.architecture-flow li { border-top-style: dashed; }
+.status-dot { box-shadow: 0 0 0 4px #eec9df; }
+.projects-section { border-block: 1px solid var(--line); }
+.featured-project { border-radius: 28px 28px 8px 28px; box-shadow: 6px 7px 0 #e8cddd; }
+.featured-top { color: var(--accent); }
+.project-tags span { background: #fff8fb; }
+.project-filters button:hover { background: #efd3e3; }
+.project-filters button[aria-pressed="true"]:hover { background: #68324e; }
+.project-links a, .featured-links > a:not(.button) { color: #783756; }
+.about-section { background: #fff9fb; }
+.stack-grid { border-top-style: dashed; }
+.contact-section { position: relative; isolation: isolate; }
+footer { background: #fff5f7; }
+@media (max-width: 900px) { .nav-links { top: 77px; background: #fff8fb; } }
+@media (prefers-reduced-motion: reduce) { .button { transition: none; } }
